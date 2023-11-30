@@ -1,0 +1,179 @@
+/* keyframes files */
+@import url(./keyframes.css);
+/* Start Global Style */
+:root {
+  --main-padding: 6.25rem;
+  --main-color: #bd945a;
+  --main-bg-color: #f6f1f0;
+  --alt-color: #faf8f7;
+  --main-transition: all 0.5s ease;
+  --main-fonts: 'Nunito Sans', sans-serif;
+}
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  height: 1000vh;
+}
+
+* {
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+}
+h6,
+a,
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+}
+h1,
+h2,
+h4,
+span {
+  font-family: 'Alex Brush', cursive;
+  font-weight: 400;
+}
+/* Start Loding */
+.loding {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  animation: parentLoding 0.5s 1.5s linear forwards;
+}
+.loding img {
+  animation: lodingHeart 0.8s 4 linear forwards alternate;
+}
+/* End Loding */
+/* Start Nav */
+nav {
+  background-color: var(--main-bg-color);
+  width: 20%;
+  transition: var(--main-transition);
+  height: 100vh;
+}
+nav .logo span {
+  color: var(--main-color);
+}
+nav .logo h6 {
+  font-family: var(--main-fonts);
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: #000;
+}
+nav ul li a {
+  color: #000;
+}
+nav ul li {
+  width: fit-content;
+  margin: auto;
+}
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0%;
+  margin: auto;
+  background-color: var(--main-color);
+  height: 1px;
+  transition: var(--main-transition);
+}
+nav ul li:hover a::before {
+  width: 80%;
+}
+nav .foot::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 10%;
+  margin: auto;
+  background-color: var(--main-color);
+  height: 1px;
+}
+nav .foot p {
+  color: #888;
+  font-size: 10px;
+}
+.bars {
+  right:  1px;
+  top: 10px;
+  z-index: 9;
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+/* End Nav */
+
+/* Start Main */
+main {
+  width: 80%;
+  float: right;
+  transition: var(--main-transition);
+}
+/* End Main */
+
+/* Start header */
+header {
+  background-image: url(../images/slider.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+header .content h1 {
+  color: #fff;
+  font-size: 120px;
+}
+header .content h5 {
+  letter-spacing: 5px;
+  color: #fff;
+}
+/* End header */
+/* Start Couple */
+section.couple {
+  padding: var(--main-padding) 0;
+  background-color: var(--alt-color);
+}
+section.couple .inner .head h6 {
+  font-weight: 600;
+}
+section.couple .inner .head i {
+  color: var(--main-color);
+}
+section.couple .inner p {
+  color: #888;
+  font-size: 14px;
+}
+section.couple figure {
+width: 50%;
+}
+section.couple .inner span {
+  color: var(--main-color);
+
+}
+section.couple .inner .icons i{
+  color: #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 13px;
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+section.couple .inner .icons i:hover {
+  color: #fff;
+  background-color: var(--main-color);
+}
+/* End Couple */

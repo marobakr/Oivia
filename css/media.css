@@ -1,0 +1,47 @@
+/* Start Nav */
+@media (min-width:922px) and (max-width: 1350px) {
+  nav {
+    width: 30%;
+    transform: translateX(-400px);
+  }
+  nav.show {
+    transform: translateX(0px);
+  }
+  body:has(nav.show) main {
+    width: 70%;
+  }
+  main {
+    width: 100%;
+  }
+  .bars {
+  display: flex;
+  }
+}
+
+@media (max-width:921px)  {
+  nav {
+    width: 50%;
+    transform: translateX(-400px);
+  }
+  nav.show {
+    transform: translateX(0px);
+  }
+  body:has(nav.show) main {
+    width: 50%;
+  }
+  main {
+    width: 100%;
+  }
+  .bars {
+  display: flex;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+  header .content h1 {
+    font-size: 40px
+  };
+}
+/* End Nav */

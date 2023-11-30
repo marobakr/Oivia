@@ -1,0 +1,29 @@
+@keyframes lodingHeart {
+  0% {
+    transform: scale(1.25);
+  }
+  20% {
+    transform: scale(1.15);
+  }
+  40% {
+    transform: scale(1.25);
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  80% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+@keyframes parentLoding {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -11;
+  }
+}
