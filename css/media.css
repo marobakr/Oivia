@@ -1,47 +1,76 @@
 /* Start Nav */
-@media (min-width:922px) and (max-width: 1350px) {
+
+/*
+  - 😄😄duiscutions😄😄
+      width for nav 40% so i will translateX main with the same value
+      and the same thig for icons
+*/
+@media (max-width: 575px) {
+  nav {
+    width: 50%;
+  }
+  body:has(nav.show) main {
+    transform: translateX(50%);
+  }
+    body:has(nav.show) .bars {
+    left: 50%;
+  }
+}
+@media (min-width: 576px) and (max-width: 993px) {
+   nav {
+    width: 40%;
+  }
+  body:has(nav.show) main {
+    transform: translateX(40%);
+  }
+   body:has(nav.show) .bars {
+    left: 40%;
+  }
+}
+@media (min-width: 922px) and (max-width: 1200px) {
   nav {
     width: 30%;
-    transform: translateX(-400px);
-  }
-  nav.show {
-    transform: translateX(0px);
   }
   body:has(nav.show) main {
-    width: 70%;
+    transform: translateX(30%);
   }
-  main {
-    width: 100%;
-  }
-  .bars {
-  display: flex;
+    body:has(nav.show) .bars {
+    left: 30%;
   }
 }
-
-@media (max-width:921px)  {
+@media (min-width: 1201px) and (max-width: 1400px) {
   nav {
-    width: 50%;
-    transform: translateX(-400px);
+    width: 25%;
+  }
+  body:has(nav.show) main {
+    transform: translateX(25%);
+  }
+    body:has(nav.show) .bars {
+    left: 25%;
+  }
+}
+/* Global Mdia */
+@media (max-width: 1400px) {
+  main {
+    width: 100%;
+    transform: translateX(0%);
+  }
+  nav {
+    transform: translateX(-100%);
   }
   nav.show {
     transform: translateX(0px);
   }
-  body:has(nav.show) main {
-    width: 50%;
-  }
-  main {
-    width: 100%;
-  }
   .bars {
-  display: flex;
+    display: flex;
   }
-}
-@media (max-width: 600px) {
-  html {
-    font-size: 15px;
-  }
-  header .content h1 {
-    font-size: 40px
-  };
 }
 /* End Nav */
+
+/* Start Story */
+@media (max-width:992px) {
+  .story figure::after {
+    height: 110%;
+  }
+}
+/* End Story */
