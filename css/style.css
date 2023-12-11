@@ -13,6 +13,7 @@
 body {
   font-family: 'Nunito Sans', sans-serif;
   overflow-x: hidden;
+  height: 1000vh;
 }
 .container {
   overflow: hidden;
@@ -37,7 +38,28 @@ span {
   font-family: 'Alex Brush', cursive;
   font-weight: 400;
 }
+span {
+  color: var(--main-color);
+}
+p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--secondry-color);
+}
 
+.w-140 {
+  width: 140px;
+}
+.main-title span {
+  color: var(--main-color);
+  font-size: 30px;
+}
+.main-title h3 {
+  color: #000;
+  font-size: 30px;
+  font-weight: 600;
+}
+/* End Global */
 /* Start Loding */
 .loding {
   position: absolute;
@@ -167,9 +189,7 @@ section.couple .inner p {
   color: var(--secondry-color);
   font-size: 14px;
 }
-section.couple figure {
-  width: 50%;
-}
+
 section.couple .inner span {
   color: var(--main-color);
 }
@@ -259,15 +279,7 @@ section.couple .foot h3 {
 .story figure img {
   transform: translate(-25px, -25px);
 }
-.story .main-title span {
-  color: var(--main-color);
-  font-size: 30px;
-}
-.story .main-title h3 {
-  color: #000;
-  font-size: 30px;
-  font-weight: 600;
-}
+
 .story .info p {
   color: var(--secondry-color);
   font-size: 15px;
@@ -279,3 +291,151 @@ section.couple .foot h3 {
   font-weight: 600;
 }
 /* End Story */
+/* Start Friends */
+.friends {
+  padding: var(--main-padding) 0;
+  background-color: var(--alt-color);
+}
+.friends .row .w-70 {
+  width: 140px;
+}
+.friends .carousel-inner h6 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.friends .carousel-inner span {
+  font-size: 24px;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: #88888847;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+.carousel-indicators .active {
+  background-color: var(--main-color);
+}
+/* End Friends */
+/* Start Organization */
+.organization {
+  padding: var(--main-padding) 0;
+  background-color: var(--alt-color);
+}
+.organization .row {
+  background-image: url(../images/slider.jpg);
+  background-position: top;
+  background-size: cover;
+  min-width: 245px;
+  min-height: 275px;
+}
+.organization .row div {
+  background-color: #fff;
+  transition: var(--main-transition);
+  padding: 60px 30px;
+  border: 1px solid #f6f1f0;
+}
+.organization .row h2 {
+  color: var(--main-color);
+  font-size: 75px;
+}
+
+.organization .row h6 {
+  color: #000;
+  transition: var(--main-transition);
+}
+.organization .row p {
+  transition: var(--main-transition);
+}
+.organization .row div:hover :is(h6, p) {
+  color: #fff;
+}
+.organization .row div:hover {
+  background-color: #00000099;
+}
+/* End Organization */
+/* Start Memories */
+#memories {
+  padding: var(--main-padding) 0;
+}
+#memories .inner-content .row figcaption {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  opacity: 0;
+  transition: var(--main-transition);
+  transform: translate(-0.0625rem, 1.25rem);
+}
+
+#memories .row div {
+  transition: all .5s linear 
+}
+#memories .row .moving-animation {
+    animation: moving 1s alternate linear;
+
+}
+#memories .inner-content .row figure:hover figcaption {
+  transform: translate(0);
+  opacity: 0.8;
+}
+#memories .inner-content .row figcaption h4 {
+  font-family: 'Alex Brush';
+  font-weight: 400;
+  font-size: 24px;
+}
+
+#memories .inner-content .row figcaption .icons span {
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: #000;
+  color: white;
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+
+#memories .inner-content .row figcaption .icons span:hover {
+  background-color: #fff;
+  border: 0.0625rem solid #000;
+  color: #000;
+}
+#memories .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: var(--main-color);
+  background-color: transparent;
+  transition: var(--main-transition);
+}
+#memories .nav-link {
+  position: relative;
+  color: var(--secondry-color);
+  font-family: 'Montserrat';
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 0.625rem;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+}
+#memories .nav-pills .nav-link::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  transition: var(--main-transition);
+}
+#memories .nav-pills .nav-link.active {
+  color: #fff;
+}
+#memories .nav-pills .nav-link.active::before {
+  background-color: var(--main-color);
+  width: 100%;
+}
+#memories .fade:not(.show) {
+  transform: scale(0.5);
+}
+#memories .fade {
+  transition: all 0.3s;
+}
+
+/* End Memories */

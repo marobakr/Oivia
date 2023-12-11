@@ -53,7 +53,7 @@
 @media (max-width: 1400px) {
   main {
     width: 100%;
-    transform: translateX(0%);
+    /* transform: translateX(0%); */
   }
   nav {
     transform: translateX(-100%);
