@@ -12,8 +12,10 @@
 }
 body {
   font-family: 'Nunito Sans', sans-serif;
-  overflow-x: hidden;
   height: 1000vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 .container {
   overflow: hidden;
@@ -368,11 +370,10 @@ section.couple .foot h3 {
 }
 
 #memories .row div {
-  transition: all .5s linear 
+  transition: all 0.5s linear;
 }
 #memories .row .moving-animation {
-    animation: moving 1s alternate linear;
-
+  animation: moving 1s alternate linear;
 }
 #memories .inner-content .row figure:hover figcaption {
   transform: translate(0);
@@ -439,3 +440,72 @@ section.couple .foot h3 {
 }
 
 /* End Memories */
+
+/* Start When And Where */
+.whenwher {
+  padding: var(--main-padding) 0;
+  background-color: var(--alt-color);
+}
+.whenwher h5 {
+  text-transform: uppercase;
+  font-family: 'Cormorant Garamond', serif;
+}
+.whenwher figcaption i {
+  color: var(--main-color);
+}
+.whenwher span:not(:first-child) {
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--secondry-color);
+}
+/* End When And Where */
+/* Start RSVP */
+.rsvp {
+  padding: var(--main-padding) 0;
+  background-image: url('../images/banner-2.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+}
+.rsvp .p-40 {
+  padding: 40px;
+}
+.rsvp span {
+  font-size: 30px;
+}
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: var(--main-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.10rem var(--main-color);
+}
+.rsvp .btn-send {
+  position: relative;
+  padding: 10px 20px;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  transition: var(--main-transition);
+  z-index: 1;
+
+}
+.rsvp .btn-send:hover {
+  color: white;
+}
+.rsvp .btn-send::before {
+  content: '';
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: var(--main-color);
+  z-index: -1;
+  transition: var(--main-transition);
+}
+
+.rsvp .btn-send:hover::before {
+  width: 100%;
+
+}
+/* End RSVP */
